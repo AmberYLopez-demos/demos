@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有趣的登录界面</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //得到焦点
+            $("#password").focus(function () {
+                $("#left_hand").animate({
+                    left: "150",
+                    top: " -38"
+                }, {
+                    step: function () {
+                        if (parseInt($("#left_hand").css("left")) > 140) {
+                            $("#left_hand").attr("class", "left_hand");
+                        }
+                    }
+                }, 2000);
+                $("#right_hand").animate({
+                    right: "-64",
+                    top: "-38px"
+                }, {
+                    step: function () {
+                        if (parseInt($("#right_hand").css("right")) > -70) {
+                            $("#right_hand").attr("class", "right_hand");
+                        }
+                    }
+                }, 2000);
+            });
+            //失去焦点
+            $("#password").blur(function () {
+                $("#left_hand").attr("class", "initial_left_hand");
+                $("#left_hand").attr("style", "left:100px;top:-12px;");
+                $("#right_hand").attr("class", "initial_right_hand");
+                $("#right_hand").attr("style", "right:-112px;top:-12px");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="top_div"></div>
+<!---->
+<div class="box">
+    <!--卡通人物-->
+    <div class="cartoon">
+        <div class="hand"></div>
+        <div class="initial_left_hand" id="left_hand"></div>
+        <div class="initial_right_hand" id="right_hand"></div>
+    </div>
+    <form action="#" method="post">
+        <div class="username">
+            <span class="u_logo"></span>
+            <input class="ipt" type="text" name="username" placeholder="请输入用户名">
+        </div>
+        <div class="password">
+            <span class="p_logo"></span>
+            <input class="ipt" id="password" type="password" name="password" placeholder="请输入密码">
+        </div>
+        <button type="submit">登录</button>
+    </form>
+</div>
+</body>
+</html>
