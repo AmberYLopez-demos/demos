@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery自动补充插件</title>
+    <meta name="keywords" content="jquery"/>
+    <link rel="stylesheet" type="text/css" href="completer.css">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script src="completer.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#auto-complete-id').completer({//自动补充学号
+                separator: "0",
+                source: ["2145001", "2145002", "2145003", "2145004", "2145005"]
+            });
+
+            $("#auto-complete-email").completer({//自动填充邮箱
+                separator: "@",
+                source: ["qq.com", "163.com", "126.com", "139.com", "gmail.com"]
+            });
+
+            var $autoCompleteDomain = $("#auto-complete-domain"),//域名
+                    $autoCompleteGo = $("#auto-complete-go");
+
+            $autoCompleteDomain.completer({
+                complete: function () {
+                    var url = "http://www." + $autoCompleteDomain.val();
+
+                    $autoCompleteGo.attr("href", url);
+                },
+                separator: ".",
+                source: ["com", "net", "org", "co", "io", "me", "cn", "com.cn"]
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row" style="margin-top: 100px;border: 1px solid #cccccc;padding: 80px 0;">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">学号:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="auto-complete-id" placeholder="请输入学号">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-2 control-label">密码:</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="auto-complete-email" class="col-sm-2 control-label">邮箱:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="auto-complete-email" placeholder="请输入邮箱">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="auto-complete-email" class="col-sm-2 control-label">域名:</label>
+                <p style="display:inline-block; margin-left:-580px;font-size:17px;">www.</p>
+                <div class="col-sm-6">
+                    <input id="auto-complete-domain" class="form-control" type="text" placeholder="请输入域名"
+                           autocomplete="off" style="z-index:0;display: inline-block;margin-left:50px;width:250px;">
+                    <a id="auto-complete-go" class="btn btn-primary" style="display: inline-block" href="javascript:void(0);">Go!</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
