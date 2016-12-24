@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#errorMsg {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #ff7500;
+    top: 0;
+    opacity: 0.7;
+    margin-bottom: 50px;
+    z-index: 1;
+    display: block;
+}
+#errorMsg span {
+    position: absolute;
+    width:70%;
+    top: 10px;
+    left: 25%;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+}
+#errorMsg span i:nth-child(1){/*警示*/
+    position: relative;
+    width:16px;
+    height:16px;
+    margin-right:20px;
+}
+
+#errorMsg span i:nth-child(2) {/*关闭*/
+    position: relative;
+    width:16px;
+    height:16px;
+    margin-left:60%;
+    cursor: pointer;
+}
+.wrap {
+    position: relative;
+    width: 65%;
+    margin-top: 4%;
+    margin-left: 18%;
+}
+
+.control-label {
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 0;
+    text-align:left
+}
+
+.basic {
+    border: 1px solid #cccccc;
+    position: relative;
+    left: -15px;
+}
+
+.form-group {
+    margin-top: 20px;
+    position: relative;
+}
+
+.basic-info { /*基础信息*/
+    position: relative;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    border-top: 3px solid #00b3ee;
+    left: -15px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0 0 30px;
+    font-family: "Microsoft YaHei";
+}
+
+
+.essential{/*星号*/
+    width:14px;
+    height:14px;
+    background: url("../images/star.png");
+    background-size: contain;
+    position: absolute;
+    top:13px;
+    left:68px;
+}
+
+.advanced-info { /*高级信息*/
+    position: relative;
+    height: 40px;
+    border: 1px solid #cccccc;
+    background-color: #f4f4f4;
+    border-top: 3px solid #00b3ee;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0 0 30px;
+    font-family: "Microsoft YaHei";
+}
+
+.desc { /*个人简介*/
+    border: 1px solid #cccccc;
+    position: relative;
+    left: -15px;
+    margin-top: 30px;
+
+}
+
+i.arrows { /*下拉箭头*/
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: 92%;
+    margin-top: 3px;
+    background: url('../images/arrows.png');
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.open {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.form-group span {
+    position: relative;
+    top: 5px;
+    color: #b92c28;
+    opacity: 0.8;
+}
+
+.btn-lg {
+    width: 150px;
+    height: 40px;
+}
+
+.button {
+    position: relative;
+    top:70px;
+    width: 500px;
+    margin: 120px 0 0 200px;
+}
+
+button:nth-child(1) {
+    margin-left: 0;
+}
+
+button {
+    margin-left: 50px;
+}
+#brief{
+    position: absolute;
+    width:100%;
+    display: block;
+    height: 42px;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#advanced-form{
+    position: absolute;
+    height:0px;
+    width:100%;
+    top:19px;
+}
