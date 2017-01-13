@@ -5,5 +5,6 @@ demos为各种常用效果的合集,均来自网上,通过再加工仅此献于�
 * [demo2:手风琴下拉菜单](https://github.com/AmberYLopez-demos/demos/tree/master/demo2)
 * [demo3:jQuery自动补充插件](https://github.com/AmberYLopez-demos/demos/tree/master/demo3)
 * [demo4:表单验证](https://github.com/AmberYLopez-demos/demos/tree/master/demo4)
-* [demo5:jQuery树型菜单插件](https://github.com/AmberYLopez-demos/demos/tree/master/demo5)<br />
+* [demo5:jQuery树型菜单插件](https://github.com/AmberYLopez-demos/demos/tree/master/demo5)
+* [demo6:瀑布流布局](https://github.com/AmberYLopez-demos/demos/tree/master/demo6)<br />
 持续更新...
