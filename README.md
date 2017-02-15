@@ -8,5 +8,6 @@ demos为各种常用效果的合集,均来自网上,通过再加工仅此献于�
 * [demo5:jQuery树型菜单插件](https://github.com/AmberYLopez-demos/demos/tree/master/demo5)
 * [demo6:瀑布流布局](https://github.com/AmberYLopez-demos/demos/tree/master/demo6)
 * [demo7:CSS3鼠标滑过图片效果](https://github.com/AmberYLopez-demos/demos/tree/master/demo7)
-* [demo8:Canvas倒计时效果](https://github.com/AmberYLopez-demos/demos/tree/master/demo8)<br />
+* [demo8:Canvas倒计时效果](https://github.com/AmberYLopez-demos/demos/tree/master/demo8)
+* [demo9:购物商城分类导航](https://github.com/AmberYLopez-demos/demos/tree/master/demo9)<br />
 持续更新...
